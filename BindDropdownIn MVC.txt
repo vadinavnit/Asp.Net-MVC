@@ -1,0 +1,36 @@
+
+public enum Province
+    {
+        NL,
+        NS,
+        NB,
+        PE,
+        QC,
+        ON,
+        SK,
+        MB,
+        AB,
+        BC,
+        NT,
+        NU,
+        YT
+    }
+
+ @Html.DropDownListFor(m => m.HomeProvince,
+                            new SelectList(Enum.GetValues(typeof(Repository.Enum.Province))))
+
+
+
+
+
+ var enumProvinceData = from Province e in Enum.GetValues(typeof(Province))
+                                 select new
+                                 {
+                                     ID = e.ToString(),
+                                     Name = e.ToString()
+                                 };
+            ViewBag.EnumProvinceList = new SelectList(enumProvinceData, "ID", "Name");
+
+@Html.DropDownListFor(m => m.HomeProvince,
+                            ViewBag.EnumProvinceList as SelectList)
+

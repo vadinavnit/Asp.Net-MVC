@@ -1,0 +1,15 @@
+@foreach(var item in  (List<student>ViewData["list"]))
+{
+
+}
+
+@foreach(var item in  (List<student>TempData["list"]))
+{
+
+}
+@foreach(var item in  ViewBag.list)
+{
+
+}
+var List = TempData["list"] as IEnumerable<Student>;
+var List = ViewData["list"] as IEnumerable<Student>;
