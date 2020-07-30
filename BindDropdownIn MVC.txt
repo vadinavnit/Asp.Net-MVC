@@ -33,4 +33,7 @@ public enum Province
 
 @Html.DropDownListFor(m => m.HomeProvince,
                             ViewBag.EnumProvinceList as SelectList)
+                            
+ViewBag.ExpiryYear = GetListOfYears();
+@Html.DropDownListFor(m => m.ExpiryYear, new SelectList(ViewBag.ExpiryYear, "Id","Name"))
 
