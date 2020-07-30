@@ -1,0 +1,54 @@
+public class Disctionary
+    {
+        public static Dictionary<string, string> Gender = new Dictionary<string, string>()
+        {
+            { "Male", "Male" },
+            { "Female", "Female" }
+        };
+
+        public static Dictionary<string, string> Province = new Dictionary<string, string>()
+        {
+            { "NL", "NL" },
+            { "NS", "NS" },
+            { "NB", "NB" },
+            { "PE", "PE" },
+            { "QC", "QC" },
+            { "ON", "ON" },
+            { "SK", "SK" },
+            { "MB", "MB" },
+            { "AB", "AB" },
+            { "BC", "BC" },
+            { "NT", "NT" },
+            { "NU", "NU" },
+            { "YT", "YT" },
+        };
+
+        public static Dictionary<int, int> Year = new Dictionary<int, int>()
+        {
+            { 2019, 2019 },
+            { 2018, 2018 },
+            { 2017, 2017 },
+            { 2016, 2016 },
+            { 2015, 2015 },
+            { 2014, 2014 },
+        };
+
+        public static Dictionary<string, string> Month = new Dictionary<string, string>()
+        {
+            { "01", "1" },
+            { "02", "2" },
+            { "03", "3" },
+            { "04", "4" },
+            { "05", "5" },
+            { "06", "6" },
+            { "07", "7" },
+            { "08", "8" },
+            { "09", "9" },
+            { "10", "10" },
+            { "11", "11" },
+            { "12", "12" },
+        };
+
+
+
+    }
