@@ -1,9 +1,9 @@
-@foreach(var item in  (List<student>ViewData["list"]))
+@foreach(var item in  (List<student>)ViewData["list"])
 {
 
 }
 
-@foreach(var item in  (List<student>TempData["list"]))
+@foreach(var item in  (List<student>)TempData["list"])
 {
 
 }
