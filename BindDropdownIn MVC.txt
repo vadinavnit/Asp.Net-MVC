@@ -37,3 +37,10 @@ public enum Province
 ViewBag.ExpiryYear = GetListOfYears();
 @Html.DropDownListFor(m => m.ExpiryYear, new SelectList(ViewBag.ExpiryYear, "Id","Name"))
 
+
+
+public List<DropdownCls> Year { get; set; }
+model.Year = GetListOfYearsDues();
+@Html.DropDownList("ddlYear", new SelectList(Model.Year, "Id", "Name"), new { disabled = "disabled", selected = DateTime.Now.Year.ToString() })
+
+
