@@ -1,0 +1,8 @@
+Rajor View Condition
+
+<a href="javascript:void(0)" onclick="@(Model.ItemViewModel.IsInStock ? Model.ItemViewModel.IsCart ? Html.Raw("updateCart(" + Model.ItemViewModel.CartId+ ")") : Html.Raw("addToCart()") : Html.Raw("javascript:return false;"))" class="@(Model.ItemViewModel.IsInStock ? "btn-black" : "btn-secondary") btn py-3 px-5">@(Model.ItemViewModel.IsInStock ? Model.ItemViewModel.IsCart ? "Update Cart" : "Add to Cart" : "Out of stock") </a>
+<a href="@((string.IsNullOrWhiteSpace(Model.ItemViewModel.Photo) || Model.ItemViewModel.Photo == null) ? Html.Raw("/imgs/no-image.png") : Html.Raw("/item-photos/" + Model.ItemViewModel.Photo))" class="image-popup"><img src="@((string.IsNullOrWhiteSpace(Model.ItemViewModel.Photo) || Model.ItemViewModel.Photo == null) ? Html.Raw("/imgs/no-image.png") : Html.Raw("/item-photos/" + Model.ItemViewModel.Photo))"  class="img-fluid" alt="@(Model.ItemViewModel.Name)"></a>
+<img class="img-fluid" src="@((string.IsNullOrWhiteSpace(folder.Photo) || folder.Photo == null) ? Html.Raw("/imgs/no-image.png") : Html.Raw("/item-photos/" + folder.Photo))" alt="@(folder.Name)">
+
+var itemOptions = @Html.Raw(JsonConvert.SerializeObject(itemOptions));
+
